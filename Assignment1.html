@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Joe's Assignment #1 Page</title>
+</head>
+<body>
+    <h1> Joe's Assignment #1 Tips</h1>
+
+    <h3> Some clarifications on the directions that I could have used</h3>
+    <h3> while working on assignment #1</h3>
+    <h4> To get to the page, this is the process:</h4>
+    <ul>
+
+        <li> The site needed to answer the actual assignment externally is:
+        <li> http://access.engr.oregonstate.edu:XXXXX </li>
+        <li> XXXXX is the same port that was used to launch the diagnostic.js file</li>
+        <li> For me, I chose <a href="http://access.engr.oregonstate.edu:13387">
+            http://access.engr.oregonstate.edu:13387</a></li>
+        <li> Of course, which assumes that port is otherwise unused</li>
+        <li> Alternatively <a href="http://flip3.engr.oregonstate.edu:13387">
+            http://flip3.engr.oregonstate.edu:13387</a> can be used</li>
+
+    </ul>
+
+    <h4> To verify that the setup works:</h4>
+    <ul>
+        <li> Launch the VPN connection </li>
+        <li> Launch the remote shell connection</li>
+        <li> Attempt to access this page:  <a href="http://access.engr.oregonstate.edu:13387">
+            http://access.engr.oregonstate.edu:13387</a> - NOTHING HAPPENS!!!</li>
+        <li> Launch the diagnostic using the following command: </li>
+        <p>      ./node_modules/forever/bin/forever start diagnostic.js 13387</p>
+        <li> Relaunch this page:  <a href="http://access.engr.oregonstate.edu:13387">
+            http://access.engr.oregonstate.edu:13387</a> - "My SQL is working" </li>
+        <li> Stop the forever process using the following command: </li>
+        <p>      ./node_modules/forever/bin/forever stopall</p>
+        <li> Relaunch this page:  <a href="http://access.engr.oregonstate.edu:13387">
+            http://access.engr.oregonstate.edu:13387</a> - again, NOTHING HAPPENS!!!</li>
+
+        <li> Then restart the forever diagnostic using the following command: </li>
+        <p>      ./node_modules/forever/bin/forever start diagnostic.js 13387</p>
+        <li> Relaunch this page:  <a href="http://access.engr.oregonstate.edu:13387">
+            http://access.engr.oregonstate.edu:13387</a> - again, My SQL is working!!!</li>
+
+
+    </ul>
+
+
+    </p>
+</body>
+</html>
